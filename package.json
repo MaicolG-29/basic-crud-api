@@ -1,0 +1,24 @@
+{
+  "name": "basic-crud-api",
+  "version": "1.0.0",
+  "description": "Basic CRUD API for educational purpose",
+  "main": "index.js",
+  "scripts": {
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaicolG-29/basic-crud-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaicolG-29/basic-crud-api/issues"
+  },
+  "homepage": "https://github.com/MaicolG-29/basic-crud-api#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
