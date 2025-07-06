@@ -1,0 +1,16 @@
+# Node.js dependencies
+/node_modules
+
+#Environment variables
+.env
+
+#Logs
+logs
+*.log
+
+# Docker volumes
+db_data/
+
+# OS/system files
+.DS_Store
+Thumbs.db
