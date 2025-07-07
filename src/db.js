@@ -1,5 +1,5 @@
 const dotenv = require("dotenv");
-const { Pool } = require("../pg");
+const { Pool } = require("pg");
 
 dotenv.config();
 
@@ -25,7 +25,5 @@ async function testConnection() {
     console.error("Error connecting to the database: ", err);
   }
 }
-
-testConnection();
 
 module.exports = pool;

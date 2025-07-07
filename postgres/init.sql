@@ -17,25 +17,25 @@ CREATE TABLE restaurant_table (
 CREATE TABLE restaurant_base (
 	restaurant_base_id SMALLSERIAL PRIMARY KEY,
 	restaurant_base_name VARCHAR(50) UNIQUE NOT NULL,
-	price SMALLINT NOT NULL CHECK (price >= 0)
+	price NUMERIC(5, 2) NOT NULL CHECK (price >= 0)
 );
 
 CREATE TABLE restaurant_protein (
 	restaurant_protein_id SMALLSERIAL PRIMARY KEY,
 	restaurant_protein_name VARCHAR(50) UNIQUE NOT NULL,
-	price SMALLINT NOT NULL CHECK (price >= 0)
+	price NUMERIC(5, 2) NOT NULL CHECK (price >= 0)
 );
 
 CREATE TABLE restaurant_topping (
 	restaurant_topping_id SMALLSERIAL PRIMARY KEY,
 	restaurant_topping_name VARCHAR(50) UNIQUE NOT NULL,
-	price SMALLINT NOT NULL CHECK (price >= 0)
+	price NUMERIC(5, 2) NOT NULL CHECK (price >= 0)
 );
 
 CREATE TABLE restaurant_drink (
 	restaurant_drink_id SMALLSERIAL PRIMARY KEY,
 	restaurant_drink_name VARCHAR(50) UNIQUE NOT NULL,
-	price SMALLINT NOT NULL CHECK (price >= 0)
+	price NUMERIC(5, 2) NOT NULL CHECK (price >= 0)
 );
 
 CREATE TABLE restaurant_order (
