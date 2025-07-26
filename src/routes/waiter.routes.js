@@ -8,4 +8,6 @@ router.post("/", waiterController.postWaiter);
 router.put("/:id", waiterController.updateWaiterById);
 router.delete("/:id", waiterController.deleteWaiterById);
 
+router.get("/:id/tables", waiterController.getWaiterTables);
+
 module.exports = router;

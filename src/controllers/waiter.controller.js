@@ -75,6 +75,10 @@ async function deleteWaiterById(req, res){
     try {
         const id = req.params.id
 
+        await pool.query(
+            "DELETE FROM restaurant_table WHERE restaurant_waiter_id = $1",
+        [id])
+
         const result = await pool.query(
             "DELETE FROM restaurant_waiter WHERE restaurant_waiter_id = $1 RETURNING *",
             [id]
@@ -90,4 +94,19 @@ async function deleteWaiterById(req, res){
     }
 }
 
-module.exports = {getAllWaiters, getWaiterById, postWaiter, updateWaiterById, deleteWaiterById}
+async function getWaiterTables(req, res){
+    try {
+        const id = req.params.id
+
+        const result = await pool.query(
+            "SELECT * FROM restaurant_table WHERE restaurant_waiter_id = $1",
+            [id]
+        )
+
+        res.status(200).json(result.rows)
+    } catch (error) {
+        res.status(500).json({error: "Internal Server Error", detail: error.detail})
+    }
+}
+
+module.exports = {getAllWaiters, getWaiterById, postWaiter, updateWaiterById, deleteWaiterById, getWaiterTables}
